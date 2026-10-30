@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог — TechStore</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">TechStore</a>
+
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainMenu"
+                    aria-controls="mainMenu"
+                    aria-expanded="false"
+                    aria-label="Открыть меню">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="catalog.html">Каталог</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="product.html">Товар</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="order.html">Оформить заказ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-5">
+
+        <!-- Заголовок каталога -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <h1 class="display-5 fw-bold">Каталог товаров</h1>
+                <p class="text-secondary">
+                    Выберите компьютерную технику для работы, учёбы и игр.
+                </p>
+            </div>
+        </div>
+
+        <!-- Поиск и сортировка -->
+        <div class="row g-3 mb-4">
+            <div class="col-12 col-md-8">
+                <label for="searchProduct" class="form-label">
+                    Поиск товара
+                </label>
+                <input type="text" class="form-control"
+                       id="searchProduct"
+                       placeholder="Например, ноутбук">
+            </div>
+
+            <div class="col-12 col-md-4">
+                <label for="sortProducts" class="form-label">
+                    Сортировка
+                </label>
+                <select class="form-select" id="sortProducts">
+                    <option value="default">По умолчанию</option>
+                    <option value="cheap">Сначала дешевле</option>
+                    <option value="expensive">Сначала дороже</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Карточки товаров -->
+        <div class="row g-4" id="productList">
+
+            <div class="col-12 col-md-6 col-lg-4 product-item"
+                 data-name="Ноутбук Pro 15" data-price="69990">
+                <div class="card product-card h-100">
+                    <img src="images/laptop.jpg" class="card-img-top product-img" alt="Ноутбук Pro 15" loading="lazy">
+                    <div class="card-body d-flex flex-column">
+                        <span class="badge text-bg-success align-self-start mb-2">
+                            Популярный
+                        </span>
+                        <h2 class="h5 card-title">Ноутбук Pro 15</h2>
+                        <p class="card-text">
+                            Ноутбук для учёбы, работы и повседневных задач.
+                        </p>
+                        <p class="product-price mt-auto">69 990 ₽</p>
+                        <a href="product.html" class="btn btn-primary">
+                            Подробнее
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 product-item"
+                 data-name="Монитор Vision 27" data-price="24990">
+                <div class="card product-card h-100">
+                    <img src="images/monitor.jpg" class="card-img-top product-img" alt="Монитор Vision 27" loading="lazy">
+                    <div class="card-body d-flex flex-column">
+                        <span class="badge text-bg-secondary align-self-start mb-2">
+                            Новинка
+                        </span>
+                        <h2 class="h5 card-title">Монитор Vision 27</h2>
+                        <p class="card-text">
+                            Монитор для работы, просмотра видео и игр.
+                        </p>
+                        <p class="product-price mt-auto">24 990 ₽</p>
+                        <a href="product.html" class="btn btn-primary">
+                            Подробнее
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 product-item"
+                 data-name="Клавиатура Game X" data-price="5490">
+                <div class="card product-card h-100">
+                    <img src="images/keyboard.jpg" class="card-img-top product-img" alt="Клавиатура Game X" loading="lazy">
+                    <div class="card-body d-flex flex-column">
+                        <span class="badge text-bg-primary align-self-start mb-2">
+                            Для игр
+                        </span>
+                        <h2 class="h5 card-title">Клавиатура Game X</h2>
+                        <p class="card-text">
+                            Удобная клавиатура для игр и набора текста.
+                        </p>
+                        <p class="product-price mt-auto">5 490 ₽</p>
+                        <a href="product.html" class="btn btn-primary">
+                            Подробнее
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 product-item"
+                 data-name="Мышь Wireless M5" data-price="2490">
+                <div class="card product-card h-100">
+                    <img src="images/mouse.jpg" class="card-img-top product-img" alt="Мышь Wireless M5" loading="lazy">
+                    <div class="card-body d-flex flex-column">
+                        <span class="badge text-bg-info align-self-start mb-2">
+                            Аксессуар
+                        </span>
+                        <h2 class="h5 card-title">Мышь Wireless M5</h2>
+                        <p class="card-text">
+                            Беспроводная мышь для работы и учёбы.
+                        </p>
+                        <p class="product-price mt-auto">2 490 ₽</p>
+                        <a href="product.html" class="btn btn-primary">
+                            Подробнее
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 product-item"
+                 data-name="Наушники Sound Pro" data-price="7990">
+                <div class="card product-card h-100">
+                    <img src="images/headphones.jpg" class="card-img-top product-img" alt="Наушники Sound Pro" loading="lazy">
+                    <div class="card-body d-flex flex-column">
+                        <span class="badge text-bg-warning align-self-start mb-2">
+                            Выбор покупателей
+                        </span>
+                        <h2 class="h5 card-title">Наушники Sound Pro</h2>
+                        <p class="card-text">
+                            Наушники для музыки, общения и игр.
+                        </p>
+                        <p class="product-price mt-auto">7 990 ₽</p>
+                        <a href="product.html" class="btn btn-primary">
+                            Подробнее
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 product-item"
+                 data-name="Веб-камера HD" data-price="3990">
+                <div class="card product-card h-100">
+                    <img src="images/webcam.jpg" class="card-img-top product-img" alt="Веб-камера HD" loading="lazy">
+                    <div class="card-body d-flex flex-column">
+                        <span class="badge text-bg-secondary align-self-start mb-2">
+                            Для работы
+                        </span>
+                        <h2 class="h5 card-title">Веб-камера HD</h2>
+                        <p class="card-text">
+                            Камера для видеозвонков и онлайн-занятий.
+                        </p>
+                        <p class="product-price mt-auto">3 990 ₽</p>
+                        <a href="product.html" class="btn btn-primary">
+                            Подробнее
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="alert alert-warning mt-4 d-none" id="emptyMessage">
+            По вашему запросу товары не найдены.
+        </div>
+
+        <div class="mt-5 p-4 bg-white rounded shadow-sm">
+            <h2 class="h4">Нужна помощь с выбором?</h2>
+            <p>
+                Оставьте заявку, и мы поможем определиться с товаром.
+            </p>
+            <a href="order.html" class="btn btn-outline-primary">
+                Оформить заявку
+            </a>
+        </div>
+
+    </main>
+
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-1">TechStore — магазин компьютерной техники</p>
+            <p class="mb-0">Учебный проект. Контрольная работа № 2.</p>
+        </div>
+    </footer>
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+    <!-- Поиск и сортировка товаров -->
+    <script>
+        const searchInput = document.getElementById("searchProduct");
+        const sortSelect = document.getElementById("sortProducts");
+        const productList = document.getElementById("productList");
+        const emptyMessage = document.getElementById("emptyMessage");
+
+        function updateProducts() {
+            const searchText = searchInput.value.toLowerCase().trim();
+            const products = Array.from(
+                productList.querySelectorAll(".product-item")
+            );
+
+            products.sort(function (a, b) {
+                const priceA = Number(a.dataset.price);
+                const priceB = Number(b.dataset.price);
+
+                if (sortSelect.value === "cheap") {
+                    return priceA - priceB;
+                }
+
+                if (sortSelect.value === "expensive") {
+                    return priceB - priceA;
+                }
+
+                return 0;
+            });
+
+            let visibleCount = 0;
+
+            products.forEach(function (product) {
+                const name = product.dataset.name.toLowerCase();
+                const matches = name.includes(searchText);
+
+                product.classList.toggle("d-none", !matches);
+
+                if (matches) {
+                    visibleCount++;
+                }
+
+                productList.appendChild(product);
+            });
+
+            emptyMessage.classList.toggle("d-none", visibleCount !== 0);
+        }
+
+        searchInput.addEventListener("input", updateProducts);
+        sortSelect.addEventListener("change", updateProducts);
+    </script>
+
+</body>
+</html>
